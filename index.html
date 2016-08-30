@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Jokenpo</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="load wow">
+			<div class="quadrado">
+			</div>
+			<div class="sombra"></div>
+			<p>Comprandos tesouras...</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12">
+		 	<div class="step one wow" data-wow-duration="0.5s" >
+				<h2 class="title wow fadeInDown">
+					Jokenpo!
+				</h2>
+				<div class="form-name wow fadeInUp">
+					<input  type="text" name="nome" id="nome" placeholder="Como sua mãe te chama ?" />
+					<button data-next-step="two" class="btn-action" id="seunome">Iniciar partida</button>
+				</div>
+			</div>
+
+			<div class="step two wow" data-wow-duration="0.5s" >
+				<h2 class="title wow ">
+					Qual seu nivel ?
+				</h2>
+				<div class="form-name wow ">
+					<button data-next-step="three" data-mode="easy" class="btn-action mode" >Fácil</button>
+					<button data-next-step="three" data-mode="hard" class="btn-action mode" >Mais que dificil</button>
+				</div>
+			</div>
+
+			<div class="threse wow" data-wow-duration="0.5s">
+				<div class="arena">
+					<div class="col s9">
+					
+						<div class="bar">
+							<h2>Computador</h2>
+							<div class="action pc" data-action-pc="1">
+								<i class="fa fa-hand-rock-o"></i>
+							</div>
+
+							<div class="action pc" data-action-pc="2">
+								<i class="fa fa-hand-paper-o"></i>
+							</div>
+
+							<div class="action pc scissor" data-action-pc="3">
+								<i class="fa fa-hand-scissors-o"></i>
+							</div>
+						</div>
+				
+						
+						<div class="campo">
+								<div id="vencedor"></div>
+						</div>
+						
+
+
+						<div class="col s12">
+							<div class="bar">
+								<div class="action pl animated" data-action="1">
+									<i class="fa fa-hand-rock-o animated"></i>
+								</div>
+
+								<div class="action pl animated" data-action="2">
+									<i class="fa fa-hand-paper-o animated"></i>
+								</div>
+
+								<div class="action pl scissor animated" data-action="3">
+									<i class="fa fa-hand-scissors-o animated"></i>
+								</div>
+									<h2 class="player"></h2>
+							</div>
+						</div>
+
+						
+					</div>
+					<div class="sidebar col s3">
+						<div class="pontuacao">Computador: <span class="ptsPlayer"></span></div>
+						<div class="pontuacao"><span class="player"></span>: <span class="ptsPc"></span></div>
+						<a href="" id="resetar">Começar novamente</a>
+					</div>
+				<div class="clearfix"></div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>		
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

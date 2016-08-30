@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+@import 'materialize';
+
+$cor1: #448AFF;
+$cor2: #C2185B ;
+$font-destaque: 'Oleo script';
+
+
+body{
+	background: $cor1;
+	height:100vh;
+}
+
+h2.title{
+	font-family:$font-destaque;
+	color:#fff;
+	font-weight:300;
+	font-size:58px;
+}
+
+
+.step{
+	position:absolute;
+	top:50px;
+	width:290px;
+	margin:auto;
+	display:none;
+	&.one{
+		text-align: center;
+		.form-name{
+			input{
+				border:none;
+				padding: 10px;
+				font-size:22px;
+				color:#666;
+				border-radius:3px;
+			}
+		}
+	}
+
+	&.three{
+		display: none;
+	}
+
+
+}
+	.sidebar{
+		display: none;
+		background:#fff;
+		font-size:22px;
+	}
+	.arena{
+		display: none;
+		background:#fff;
+		border-radius:5px;
+		box-shadow:2px 2px 2px 1px #ddd;
+		min-height: 500px;
+		width: 100%;
+
+		.campo{
+			background:#eee;
+			min-height: 250px;
+		}
+
+		#vencedor{
+			text-align: center;
+			font-size:22px;
+		}
+	}
+	.bar{
+		text-align: center;
+	}
+	.action{
+		display: inline-block;
+		transition: all 0.5s;
+		&.scissor{
+			i{
+			transform: rotate(90deg)}
+		}
+		i{
+				padding:15px;
+				font-size:52px;	
+				transition: all 0.5s;
+			&:hover{
+				cursor:pointer;
+				padding-top:0px;
+				font-size:65px;
+			}
+		}
+	}
+
+
+.btn-action{
+	display:block;
+	border:none;
+	width: 100%;
+	margin-top:5px;
+	padding:10px 0;
+	border-radius:4px;
+	font-size: 22px;
+	transition:all 0.4s;
+	&:hover{
+		background:$cor2;
+		color:#fff;
+	}
+}
+
+
+
+
+/***/
+$primaria: #E91E63;
+$contraste: #448AFF;
+$tamanho: 45px;
+
+*{
+	margin:0;
+	padding:0;
+}
+.load{
+	background-color: $contraste;
+    height: 60vh;
+    text-align:center;
+    display:none;
+    padding-top:40vh;
+   // margin-top:$tamanho/2*-1
+   p{
+   	color:#fff;
+   	font-weight: 600;
+   	font-size: 14px;
+   }
+}
+
+.quadrado{
+	background: $primaria;
+	height:$tamanho;
+	width:$tamanho;
+	margin:0 auto;
+	border-radius:10%;
+	z-index:2;
+	animation: andar .7s linear infinite
+}
+.sombra{
+	background:#000;
+	opacity:0.2;
+	width:$tamanho;
+	height:5px;
+	margin: ((60 * $tamanho)/150) auto; //regra de três
+	z-index:1;
+	border-radius:100%;
+	animation: sombra .7s linear infinite
+}
+
+@keyframes andar {
+    0%{
+    	transform:rotate(0deg);
+    }
+
+    50% {
+		border-bottom-right-radius:50%;
+        transform:translateY(50%) scale(1, .8) rotate(45deg);
+    }
+     
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes zoom {
+    0%{
+    	transform:rotate(0deg) scale(1) rotate(0);
+    }
+
+    100% {
+        transform:scale(30) rotate(999deg);
+    }
+}
+
+@keyframes sombra {
+    50% {
+
+    	 transform: scale(1.3,1);
+	}
+}
+
